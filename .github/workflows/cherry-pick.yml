@@ -1,7 +1,7 @@
 on:
   pull_request:
     branches:
-      - main
+      - release-1.26
     types: ["closed"]
 
 jobs:
