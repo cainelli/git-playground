@@ -1,0 +1,25 @@
+on:
+  pull_request:
+    branches:
+      - main
+    types: ["closed"]
+
+jobs:
+  cherry_pick_release_1_26:
+    runs-on: ubuntu-latest
+    name: cherry pick into release-1.26
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: cherry pick into release-1.26
+        uses: carloscastrojumo/github-cherry-pick-action@v1.0.9
+        with:
+          branch: release-1.26
+          title: '[cherry-pick] {old_title}'
+          body: 'Cherry picking #{old_pull_request_id} onto this branch'
+          labels: |
+            cherry-pick
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
