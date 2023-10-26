@@ -21,10 +21,9 @@ jobs:
       - name: cherry pick into release-1.27
         uses: carloscastrojumo/github-cherry-pick-action@v1.0.9
         with:
+          token: ${{ github.token }}
           branch: release-1.27
           title: '[cherry-pick] {old_title}'
           body: 'Cherry picking #{old_pull_request_id} onto this branch'
           labels: |
             cherry-pick
-env:
-  GITHUB_TOKEN: ${{ github.TOKEN }}
