@@ -3,5 +3,5 @@ package main
 import "log/slog"
 
 func main() {
-	slog.Info("git playground - feat. 2")
+	slog.Info("git playground - feat. 3")
 }
