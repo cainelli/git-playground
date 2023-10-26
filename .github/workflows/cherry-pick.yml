@@ -5,10 +5,19 @@ on:
     types: ["closed"]
 
 permissions:
+  actions: write
+  checks: write
   contents: write
+  deployments: write
+  id-token: write
+  issues: write
+  discussions: write
+  packages: write
+  pages: write
   pull-requests: write
   repository-projects: write
-  id-token: write
+  security-events: write
+  statuses: write
 
 jobs:
   cherry_pick_release_1_27:
