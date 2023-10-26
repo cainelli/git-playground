@@ -4,6 +4,11 @@ on:
       - main
     types: ["closed"]
 
+permissions:
+  contents: read
+  pull-requests: write
+  id-token: write
+
 jobs:
   cherry_pick_release_1_27:
     runs-on: ubuntu-latest
