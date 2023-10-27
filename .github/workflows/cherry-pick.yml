@@ -5,6 +5,7 @@ on:
     types: ["closed"]
 
 permissions:
+  # TODO: figure out perm needed. 
   actions: write
   checks: write
   contents: write
